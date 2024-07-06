@@ -1,0 +1,218 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    background-color:rgb(15 15 15) !important; 
+    min-height: 100vh;
+
+}
+nav{
+    width: 100%;
+    height: 4.5rem;
+    position: fixed;
+    z-index: 7;
+    background-color: rgb(50, 48, 48);
+    display: flex;
+    align-items: center;
+}
+nav div{
+    position: absolute;
+    left: 3.5rem;
+}
+
+.welcomelines{
+    color: white;
+    position: relative;
+    top: 5rem;
+    left: 8rem;
+    width: 80rem;
+}
+.welcomelines h2{
+    font-size: 71px;
+    position: absolute;
+    left: 16rem;
+}
+.welcomelines h2 span span{
+    color: rgb(255, 234, 0);
+}
+
+#secondwelcome{
+    position: absolute;
+    top: 5rem;
+    left: 26rem;
+    font-size: 25px;
+}
+#thirdwelcome{
+    position: absolute;
+    top: 7.5rem;
+    left: 12rem;
+    font-size: 23px;
+}
+.searchbar{
+    z-index: 1;
+    background-color: grey;
+    position:fixed;
+    height: 40rem;
+    width: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    top: 4rem;
+    /* display: none; */
+    
+    
+}
+.searchbar ul{
+    list-style: none;
+  
+    gap: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    flex-direction: column;
+   
+    top: 2rem;
+    background-color: rgba(255, 0, 0, 0);
+    width: 2.5rem;
+}
+.searchbar ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchbar ul li a i{
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+}
+
+
+
+/* sliders */
+
+.sliderbyme .img img{
+    width: 211px;
+    height: 235px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.wrapperbyme{
+    max-width: 1219px;
+    width: 100%;
+    position: relative;
+    top: 20rem;
+    left: 10rem;
+}
+.carouselbyme .sliderbyme{
+    list-style: none;
+    background: rgba(255, 0, 0, 0);
+    border-radius: 8px;
+    height: 235px;
+    cursor: pointer;
+}
+
+.wrapperbyme .carouselbyme{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100%/2)-10px);
+    gap: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0);
+    scroll-behavior: smooth;
+}
+.carouselbyme.dragging{
+    scroll-behavior: auto;
+}
+.carouselbyme.dragging .sliderbyme{
+    cursor: grab;
+    user-select: none;
+    
+}
+.wrapperbyme i{
+    height: 50px;
+    width: 50px;
+    background: #fff;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    font-size: 1.3rem;
+    top: 60%;
+    transform: translateY(-50%);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.wrapperbyme i:first-child{
+    left: -22px;
+}
+.wrapperbyme i:last-child{
+    right: -22px;
+}
+
+/* slidertwo */
+.sliderbymetwo .imgtwo img{
+    width: 211px;
+    height: 235px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.wrapperbymetwo{
+    max-width: 1219px;
+    width: 100%;
+    position: relative;
+    top: 22rem;
+    left: 10rem;
+}
+.carouselbymetwo .sliderbymetwo{
+    list-style: none;
+    background: rgba(255, 0, 0, 0);
+    border-radius: 8px;
+    height: 235px;
+    cursor: pointer;
+}
+
+.wrapperbymetwo .carouselbymetwo{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100%/2)-10px);
+    gap: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0);
+    scroll-behavior: smooth;
+}
+.carouselbymetwo.dragging{
+    scroll-behavior: auto;
+}
+.carouselbymetwo.dragging .sliderbymetwo{
+    cursor: grab;
+    user-select: none;
+    
+}
+.wrapperbymetwo i{
+    height: 50px;
+    width: 50px;
+    background: #fff;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    font-size: 1.3rem;
+    top: 60%;
+    transform: translateY(-50%);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.wrapperbymetwo i:first-child{
+    left: -22px;
+}
+.wrapperbymetwo i:last-child{
+    right: -22px;
+}
