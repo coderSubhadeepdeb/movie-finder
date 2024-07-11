@@ -2,10 +2,13 @@ const carousel= document.querySelector(".carouselbyme");
 const carouselTwo= document.querySelector(".carouselbymetwo");
 const getStartBtn= document.querySelector(".fourthareadivright button");
 // const img= document.querySelector(".img");
-const arrowBtn = document.querySelectorAll(".wrapperbyme i")
-const arrowBtnTwo = document.querySelectorAll(".wrapperbymetwo i")
-const movieimg =document.querySelectorAll(".sliderbyme .img ")
-const movieimgtwo =document.querySelectorAll(".sliderbymetwo .imgtwo ")
+const arrowBtn = document.querySelectorAll(".wrapperbyme i");
+const arrowBtnTwo = document.querySelectorAll(".wrapperbymetwo i");
+const movieimg =document.querySelectorAll(".sliderbyme .img ");
+const movieimgtwo =document.querySelectorAll(".sliderbymetwo .imgtwo ");
+const bar = document.querySelector('.bar');
+const cross = document.querySelector('.cross');
+const sidebar = document.querySelector('.sidebar');
 // const imgLength = document.querySelector('.realimg').offsetWidth;
 // let isDragging=false,startX, startScrollLeft;
 
@@ -68,6 +71,15 @@ movieimgtwo.forEach(element=>{
 
 getStartBtn.addEventListener('click',()=>{
     window.location.href='searchmovie.html';
+})
+
+bar.addEventListener('click',()=>{
+  bar.style.display='none';
+  sidebar.style.display='flex';
+})
+cross.addEventListener('click',()=>{
+  sidebar.style.display='none';
+  bar.style.display='flex';
 })
 // const dragStart =(e)=>{
 //     isDragging = true;

@@ -1,15 +1,17 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    
+
 }
-body{
-    background-color:rgb(15 15 15) !important; 
+
+body {
+    background-color: rgb(15 15 15) !important;
     min-height: 100vh;
 
 }
-nav{
+
+nav {
     width: 100%;
     height: 4.5rem;
     position: fixed;
@@ -18,43 +20,101 @@ nav{
     display: flex;
     align-items: center;
 }
-nav div{
+
+#logo {
     position: absolute;
     left: 3.5rem;
 }
 
-.welcomelines{
+.bar{
+    color: white;
+    font-size: 31px;
+    /* align-self: flex-end; */
+    position: absolute;
+    right: 26px;
+    width: 2rem;
+    display: none;
+}
+
+.sidebar{
+    position: fixed;
+    right: 0;
+    height: 100%;
+    width: 11rem;
+    background: rgb(130 127 127 / 22%);
+    z-index: 20;
+    display: none;
+
+}
+.sidebar ul{
+   
+    width: 70%;
+    height: 16rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    position: absolute;
+    top: 6rem;
+    font-size: 23px;
+    gap: 1rem;
+    left: 1.2rem;
+}
+.sidebar ul a{
+    color: rgb(255, 234, 0);
+    text-decoration: none;
+}
+.sidebar ul a:hover{
+    color: rgb(201, 185, 9);
+    text-decoration: none;
+}
+.cross{
+    height: 2rem;
+    font-size: 32px;
+    color: white;
+    /* align-self: flex-start; */
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+
+.welcomelines {
     color: white;
     position: relative;
     top: 5rem;
     left: 8rem;
     width: 80rem;
 }
-.welcomelines h2{
+
+.welcomelines h2 {
     font-size: 71px;
     position: absolute;
     left: 16rem;
 }
-.welcomelines h2 span span{
+
+.welcomelines h2 span span {
     color: rgb(255, 234, 0);
 }
 
-#secondwelcome{
+#secondwelcome {
     position: absolute;
     top: 5rem;
     left: 26rem;
     font-size: 25px;
 }
-#thirdwelcome{
+
+#thirdwelcome {
     position: absolute;
     top: 7.5rem;
     left: 12rem;
     font-size: 23px;
 }
-.searchbar{
+
+.searchbar {
     z-index: 1;
     background-color: grey;
-    position:fixed;
+    position: fixed;
     height: 40rem;
     width: 4.5rem;
     display: flex;
@@ -62,30 +122,32 @@ nav div{
     left: 0;
     top: 4rem;
     /* display: none; */
-    
-    
+
+
 }
-.searchbar ul{
+
+.searchbar ul {
     list-style: none;
-  
+
     gap: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     flex-direction: column;
-   
+
     top: 2rem;
     background-color: rgba(255, 0, 0, 0);
     width: 2.5rem;
 }
-.searchbar ul li{
+
+.searchbar ul li {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.searchbar ul li a i{
+.searchbar ul li a i {
     color: rgb(255, 255, 255);
     font-size: 2rem;
 }
@@ -94,22 +156,24 @@ nav div{
 
 /* sliders */
 
-.sliderbyme .img img{
+.sliderbyme .img img {
     transform: none;
     height: 235px;
     width: 211px;
     object-fit: cover;
     border-radius: 8px;
 }
-.wrapperbyme{
+
+.wrapperbyme {
     max-width: 1219px;
     width: 100%;
     position: relative;
     top: 20rem;
     left: 10rem;
 }
-.carouselbyme .sliderbyme{
-     
+
+.carouselbyme .sliderbyme {
+
 
     list-style: none;
     background: rgba(255, 0, 0, 0);
@@ -119,15 +183,16 @@ nav div{
     display: flex;
     flex-direction: column;
     transition: all 0.1s ease-in-out;
-    
+
 }
+
 /* .carouselbyme .sliderbyme:hover{
    
     transform: scale(1.1);
     /* box-shadow: 0px 0px 8px -2px white;}*/
 
 
-.wrapperbyme .carouselbyme{
+.wrapperbyme .carouselbyme {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: calc((100%/2)-10px);
@@ -139,6 +204,7 @@ nav div{
     scroll-behavior: smooth;
     height: 362px;
 }
+
 /* .carouselbyme.dragging{
     scroll-behavior: auto;
 } */
@@ -147,7 +213,7 @@ nav div{
     user-select: none;
     
 } */
-.wrapperbyme i{
+.wrapperbyme i {
     height: 50px;
     width: 50px;
     background: #fff;
@@ -159,32 +225,35 @@ nav div{
     font-size: 1.3rem;
     top: 46%;
     transform: translateY(-50%);
-    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-.wrapperbyme i:first-child{
+.wrapperbyme i:first-child {
     left: -25px;
 }
-.wrapperbyme i:last-child{
+
+.wrapperbyme i:last-child {
     right: -25px;
 }
 
 /* slidertwo */
-.sliderbymetwo .imgtwo img{
+.sliderbymetwo .imgtwo img {
     transform: none;
     height: 235px;
     width: 211px;
     object-fit: cover;
     border-radius: 8px;
 }
-.wrapperbymetwo{
+
+.wrapperbymetwo {
     max-width: 1219px;
     width: 100%;
     position: relative;
     top: 15rem;
     left: 10rem;
 }
-.carouselbymetwo .sliderbymetwo{
+
+.carouselbymetwo .sliderbymetwo {
     list-style: none;
     background: rgba(255, 0, 0, 0);
     border-radius: 8px;
@@ -195,7 +264,7 @@ nav div{
     transition: all 0.1s ease-in-out;
 }
 
-.wrapperbymetwo .carouselbymetwo{
+.wrapperbymetwo .carouselbymetwo {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: calc((100%/2)-10px);
@@ -207,6 +276,7 @@ nav div{
     scroll-behavior: smooth;
     height: 362px;
 }
+
 /* .carouselbymetwo.dragging{
     scroll-behavior: auto;
 }
@@ -215,7 +285,7 @@ nav div{
     user-select: none;
     
 } */
-.wrapperbymetwo i{
+.wrapperbymetwo i {
     height: 50px;
     width: 50px;
     background: #fff;
@@ -227,24 +297,25 @@ nav div{
     font-size: 1.3rem;
     top: 46%;
     transform: translateY(-50%);
-    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-.wrapperbymetwo i:first-child{
+.wrapperbymetwo i:first-child {
     left: -22px;
 }
-.wrapperbymetwo i:last-child{
+
+.wrapperbymetwo i:last-child {
     right: -22px;
 }
 
-.slidemovieinfo{
+.slidemovieinfo {
     z-index: 7;
     background: rgb(48, 46, 46);
     color: azure;
     min-width: 211px;
     width: 100%;
     /* min-height: 22px; */
-    
+
     height: 95px;
     display: none;
     flex-direction: column;
@@ -252,28 +323,30 @@ nav div{
     border-bottom-right-radius: 8px;
     transform: none;
 }
-.slidemovieinfo h3{
+
+.slidemovieinfo h3 {
     padding: 0 15px;
     font-size: 16px;
     margin: 0;
 }
-.releaseinfo{
+
+.releaseinfo {
     height: 60px;
     overflow: hidden;
     font-size: 16px;
-   margin: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
 }
 
-.releaseinfo p{
+.releaseinfo p {
     margin: 0;
     font-size: 13px;
     padding: 0 15px;
     font-weight: 700;
 }
 
-.fourthareadiv{
+.fourthareadiv {
     background-color: blue;
     position: relative;
     top: 25rem;
@@ -281,14 +354,15 @@ nav div{
     height: 10rem;
 
 }
-.slidemovieinfotwo{
+
+.slidemovieinfotwo {
     z-index: 7;
     background: rgb(48, 46, 46);
     color: azure;
     min-width: 211px;
     width: 100%;
     /* min-height: 22px; */
-    
+
     height: 95px;
     display: none;
     flex-direction: column;
@@ -296,50 +370,55 @@ nav div{
     border-bottom-right-radius: 8px;
     transform: none;
 }
-.slidemovieinfotwo h3{
+
+.slidemovieinfotwo h3 {
     padding: 0 15px;
     font-size: 16px;
     margin: 0;
 }
-.releaseinfotwo{
+
+.releaseinfotwo {
     height: 60px;
     overflow: hidden;
     font-size: 16px;
-   margin: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
 }
 
-.releaseinfotwo p{
+.releaseinfotwo p {
     margin: 0;
     font-size: 13px;
     padding: 0 15px;
     font-weight: 700;
 }
 
-.fourthareadiv{
+.fourthareadiv {
     background-color: rgba(0, 0, 255, 0);
     position: relative;
     top: 12rem;
     width: 100%;
     height: 8rem;
     padding: 1% 22%;
-    display:flex;
+    display: flex;
     gap: 2rem;
 
 
 }
-.fourthareadivleft p{
+
+.fourthareadivleft p {
     background: rgba(255, 0, 0, 0);
     width: 37rem;
     font-size: 33px;
     color: white;
 }
-.fourthareadivright{
+
+.fourthareadivright {
     display: flex;
     align-items: center;
 }
-.fourthareadivright button{
+
+.fourthareadivright button {
     width: 13rem;
     height: 4rem;
     color: #0b0909;
@@ -350,7 +429,8 @@ nav div{
     box-shadow: 0 0 9px 1px white;
     transition: all 0.2s ease-in;
 }
-.fourthareadivright button:hover{
+
+.fourthareadivright button:hover {
     transform: scale(1.01);
     background-color: rgb(177, 152, 14)
 }
@@ -358,21 +438,24 @@ nav div{
 
 
 /* footer */
-footer{
+footer {
     position: relative;
     top: 15rem;
 }
-.footouter{
+
+.footouter {
     position: relative;
-    background-color:#1c1a1a;
+    background-color: #1c1a1a;
     height: 29rem;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
-#footinnerone{
-    
+
+#footinnerone {
+
     background-color: rgba(195, 139, 247, 0);
     width: 21%;
     height: 100%;
@@ -383,8 +466,9 @@ footer{
     padding-left: 67px;
     padding-top: 14px;
 }
-#footinnertwo{
-    
+
+#footinnertwo {
+
     background-color: rgba(195, 139, 247, 0);
     width: 21%;
     height: 100%;
@@ -396,8 +480,9 @@ footer{
     padding-top: 14px;
 
 }
-#footinnerthree{
-    
+
+#footinnerthree {
+
     background-color: rgba(195, 139, 247, 0);
     width: 21%;
     height: 100%;
@@ -409,8 +494,9 @@ footer{
     padding-top: 14px;
 
 }
-#footinnerfour{
-    
+
+#footinnerfour {
+
     background-color: rgba(195, 139, 247, 0);
     width: 21%;
     height: 100%;
@@ -421,6 +507,7 @@ footer{
     padding-left: 67px;
     padding-top: 14px;
 }
+
 #langtwo {
     width: 120px;
     border-radius: 5px;
@@ -435,6 +522,111 @@ footer{
 
 
 }
-#langtwo option{
+
+#langtwo option {
     color: black;
+}
+
+
+/* media queries */
+
+@media(max-width:450px) {
+
+    main{
+        
+        width: 80rem !important;
+        height: 111rem;
+    }
+    .searchbar {
+        display: none;
+    }
+
+    .welcomelines {
+        left: 0rem;
+    }
+
+    #carouselExampleIndicators {
+        left: 5.5rem !important;
+    }
+
+    .wrapperbyme {
+        width: 1004px;
+        position: relative;
+        top: 20rem;
+        left: 9rem;
+    }
+    .wrapperbymetwo {
+        width: 1004px;
+        position: relative;
+        top: 20rem;
+        left: 9rem;
+    }
+
+    .fourthareadiv {
+        left: 0rem;
+        top: 16rem;
+    }
+    footer {
+        position: relative;
+        top: 0rem;
+        width: 80rem !important;
+    }
+    .footouter {
+        width: 100%;
+        top: 3rem;
+    }
+    .bar{
+        display: flex;
+    }
+
+}
+
+@media(min-width:450px)and (max-width:1272px){
+    main{
+        
+        width: 80rem !important;
+        height: 111rem;
+    }
+    .searchbar {
+        display: none;
+    }
+
+    .welcomelines {
+        left: 0rem;
+    }
+
+    #carouselExampleIndicators {
+        left: 5.5rem !important;
+    }
+
+    .wrapperbyme {
+        width: 1004px;
+        position: relative;
+        top: 20rem;
+        left: 9rem;
+    }
+    .wrapperbymetwo {
+        width: 1004px;
+        position: relative;
+        top: 20rem;
+        left: 9rem;
+    }
+
+    .fourthareadiv {
+        left: 0rem;
+        top: 16rem;
+    }
+    footer {
+        position: relative;
+        top: 0rem;
+        width: 80rem !important;
+    }
+    .footouter {
+        width: 100%;
+        top: 3rem;
+    }
+    .bar{
+        display: flex;
+    }
+
 }
