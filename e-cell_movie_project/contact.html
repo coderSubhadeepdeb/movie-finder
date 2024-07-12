@@ -67,19 +67,19 @@
         <span></span>
       </div>
       <div class="secondmainright">
-        <form method="POST" id="myform">
-          <label for="name">
+        <form name="contact" method="POST" id="myform" netlify>
+          <label >
             <p>Your Name :</p>
-            <input type="text" id="firstname" class="yourname" placeholder="First Name" required><input type="text"
-              id="lastname" class="yourname" placeholder="Last Name" required>
+            <input type="text" id="firstname" class="yourname" placeholder="First Name" name="Firstname" /><input type="text"
+              id="lastname" class="yourname" placeholder="Last Name" name="Lastname" />
           </label>
           <label for="email">
             <p>Your Email :</p>
-            <input id="youremail" type="email" placeholder="Enter Email" required>
+            <input id="youremail" type="email" placeholder="Enter Email" name="email" />
           </label>
           <label for="message">
             <p>Type Message :</p>
-            <textarea name="message" id="yourmessage" row="7"></textarea>
+            <textarea name="message" id="yourmessage" row="7" name="message"></textarea>
           </label>
           <button type="submit" id="Btn">
             <p style="font-size: 17px;

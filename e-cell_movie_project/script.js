@@ -4,11 +4,12 @@ const getStartBtn= document.querySelector(".fourthareadivright button");
 // const img= document.querySelector(".img");
 const arrowBtn = document.querySelectorAll(".wrapperbyme i");
 const arrowBtnTwo = document.querySelectorAll(".wrapperbymetwo i");
-const movieimg =document.querySelectorAll(".sliderbyme .img ");
-const movieimgtwo =document.querySelectorAll(".sliderbymetwo .imgtwo ");
+const movieimg =document.querySelectorAll(".img ");
+const movieimgtwo =document.querySelectorAll(" .imgtwo ");
 const bar = document.querySelector('.bar');
 const cross = document.querySelector('.cross');
 const sidebar = document.querySelector('.sidebar');
+
 // const imgLength = document.querySelector('.realimg').offsetWidth;
 // let isDragging=false,startX, startScrollLeft;
 
@@ -25,6 +26,12 @@ const sidebar = document.querySelector('.sidebar');
 });
 
 // for showing movie info
+async function loadSliderMovies(title) {
+  const URL = `https://www.omdbapi.com/?apikey=8d771bf2&t=${title}`;
+  const res = await fetch(`${URL}`);
+  const data = await res.json();
+  if (data.Response == "True") return(data);
+}
 
 movieimg.forEach(element=>{
     
@@ -33,19 +40,51 @@ movieimg.forEach(element=>{
     element.style.transform= 'scale(1.1)';
     element.nextElementSibling.style.transform= 'scale(1.1)';
     element.nextElementSibling.style.display='flex';
-  })
+  });
 
-  element.addEventListener('click',  ()=>{
-    window.location.href="searchmovie.html";
-  })
+  element.addEventListener('click',  async ()=>{
+
+    // const sliderMovieInSession =[];
+    console.log('searched');
+    let id = element.parentElement.id.trim();
+    let movieData = await loadSliderMovies(id);
+    let sliderPoster = movieData.Poster;
+    let sliderTitle = movieData.Title;
+    let sliderYear = movieData.Year;
+    let sliderRated = movieData.Rated;
+    let sliderReleased = movieData.Released;
+    let sliderActors = movieData.Actors;
+    let sliderGenre = movieData.Genre;
+    let sliderDirector = movieData.Director;
+    let sliderLanguage = movieData.Language;
+    let sliderPlot = movieData.Plot;
+    let sliderAwards = movieData.Awards;
+    const sliderMovie = {
+        poster: sliderPoster,
+        title: sliderTitle,
+        year:sliderYear ,
+        rated: sliderRated,
+        released: sliderReleased,
+        director: sliderDirector,
+        actors: sliderActors,
+        genre: sliderGenre,
+        language: sliderLanguage,
+        plot:sliderPlot,
+        awards: sliderAwards
+    };
+     
+    // sliderMovieInSession.push(sliderMovie);
+    sessionStorage.setItem('sliderMoviesArray', JSON.stringify([sliderMovie]));
+    window.location.href="redirect.html";
+  });
   element.addEventListener('mouseleave',()=>{
     
     element.style.transform= 'none';
      element.nextElementSibling.style.transform= 'none';
     element.nextElementSibling.style.display='none';
     
-  })
-})
+  });
+});
 
 
 movieimgtwo.forEach(element=>{
@@ -57,8 +96,38 @@ movieimgtwo.forEach(element=>{
     element.nextElementSibling.style.display='flex';
   })
 
-  element.addEventListener('click',  ()=>{
-    window.location.href="searchmovie.html";
+  element.addEventListener('click', async ()=>{
+    console.log('searched');
+    let id = element.parentElement.id.trim();
+    let movieData = await loadSliderMovies(id);
+    let sliderPoster = movieData.Poster;
+    let sliderTitle = movieData.Title;
+    let sliderYear = movieData.Year;
+    let sliderRated = movieData.Rated;
+    let sliderReleased = movieData.Released;
+    let sliderActors = movieData.Actors;
+    let sliderGenre = movieData.Genre;
+    let sliderDirector = movieData.Director;
+    let sliderLanguage = movieData.Language;
+    let sliderPlot = movieData.Plot;
+    let sliderAwards = movieData.Awards;
+    const sliderMovie = {
+        poster: sliderPoster,
+        title: sliderTitle,
+        year:sliderYear ,
+        rated: sliderRated,
+        released: sliderReleased,
+        director: sliderDirector,
+        actors: sliderActors,
+        genre: sliderGenre,
+        language: sliderLanguage,
+        plot:sliderPlot,
+        awards: sliderAwards
+    };
+     
+    // sliderMovieInSession.push(sliderMovie);
+    sessionStorage.setItem('sliderMoviesArray', JSON.stringify([sliderMovie]));
+    window.location.href="redirect.html";
   })
   element.addEventListener('mouseleave',()=>{
     
