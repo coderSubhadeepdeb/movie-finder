@@ -11,12 +11,14 @@ const sidebar = document.querySelector('.sidebar');
 
 
 button.addEventListener('click', (event) => {
+
+    event.preventDefault();
     let firstValue = (firstName.value).trim();
     let lastValue = (lastName.value).trim();
     let emailValue = (email.value).trim();
 
     if (firstValue.length > 0 && lastValue.length > 0 && emailValue.length > 0) {
-        event.preventDefault();
+        form.submit();
         popUp.innerHTML = `<p>Your form is submitted succesfully!</p>`;
         popUp.style.color = 'lime';
 
@@ -26,7 +28,6 @@ button.addEventListener('click', (event) => {
         }, 5000);
     }
     else {
-        event.preventDefault();
         popUp.innerHTML = `<p>Properly fillout the form!</p>`;
         popUp.style.color = 'red';
         popUp.style.display = 'flex';
